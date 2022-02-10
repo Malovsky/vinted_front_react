@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
 import OfferCard from "../components/OfferCard";
+import bannerImage from "../assets/banner_header_vinted.jpeg";
 
 const Home = () => {
   const [data, setData] = useState({});
@@ -29,7 +29,7 @@ const Home = () => {
     </div>
   ) : (
     <>
-      <Header />
+      <img className="home-image" src={bannerImage} alt={bannerImage} />
       <div className="list-items center">
         {data.offers.map((item, index) => {
           return <OfferCard key={index} item={item} />;

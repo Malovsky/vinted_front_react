@@ -1,13 +1,31 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
+import Header from "./components/Header";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Cookies from "js-cookie";
 
 function App() {
+  const [isConnected, setIsConnected] = useState(
+    Cookies.get("token") ? true : false
+  );
+
   return (
     <Router>
+      <Header isConnected={isConnected} setIsConnected={setIsConnected} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={<Login setIsConnected={setIsConnected} />}
+        />
+        <Route
+          path="/signup"
+          element={<Signup setIsConnected={setIsConnected} />}
+        />
         <Route path="/offer/:id" element={<Offer />} />
       </Routes>
     </Router>
