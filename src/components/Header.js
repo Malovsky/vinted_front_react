@@ -4,7 +4,7 @@ import logoVinted from "../assets/Vinted-logo.png";
 const Header = () => {
   return (
     <div className="header">
-      <header className="center">
+      <header>
         <div className="navbar">
           <img className="logo-vinted" src={logoVinted} alt="" />
           <input
