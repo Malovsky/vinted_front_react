@@ -1,8 +1,8 @@
 import logoVinted from "../assets/Vinted-logo.png";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
-const Header = ({ isConnected, setIsConnected }) => {
+const Header = ({isConnected, setIsConnected}) => {
   const navigate = useNavigate();
 
   const logout = () => {
