@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Offer = () => {
   const [item, setItem] = useState();
@@ -55,7 +56,12 @@ const Offer = () => {
               {item.owner.account.username}
             </span>
           </div>
-          <button className="offer-details-buy-button">Acheter</button>
+          <Link
+            to="/payment"
+            state={{ title: item.product_name, price: item.product_price }}
+          >
+            <button className="offer-details-buy-button">Acheter</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ function App() {
           path="/publish"
           element={<Publish isConnected={isConnected} />}
         />
-        <Route path="/payement" element={<Payment />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </Router>
   );

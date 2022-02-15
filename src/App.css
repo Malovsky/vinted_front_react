@@ -12,6 +12,10 @@ h2 {
   margin: 1rem 0;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* To re-DO */
 link,
 a {
@@ -404,11 +408,11 @@ a {
   width: auto;
 }
 .publish-delete-preview-picture {
-  color: rgb(207, 0, 0);
+  color: #c2185b;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid rgb(207, 0, 0);
+  border: 1px solid #c2185b;
   padding: 1rem;
   margin-left: 1rem;
 }
@@ -441,10 +445,6 @@ a {
   border-bottom: 1px solid #02b2bc;
 }
 
-.flex-zone h4 {
-  /* padding: 24px; */
-}
-
 .publish-button-container {
   display: flex;
   justify-content: flex-end;
@@ -458,4 +458,79 @@ a {
   padding: 1rem;
   margin: 2rem 0 5rem;
   cursor: pointer;
+}
+
+/* PAYMENT */
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+  margin: 24px 0;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column; */
+  /* text-align: center; */
+  margin-top: 2rem;
+  align-items: center;
+  /* width: 96vw; */
+  /* max-width: 1200px; */
+  background-color: #ebedee;
+}
+
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 600px;
+  margin: 2rem auto;
+}
+
+.payment-title {
+  color: #999;
+  font-weight: 300;
+  padding: 24px 24px 8px;
+}
+
+.payment-resume {
+  padding: 1.5rem;
+  color: #666;
+}
+
+.payment-resume ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.payment-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.payment-resume-container {
+  padding: 1.5rem;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.payment-pay-button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #00c06d;
+  margin: 1rem auto;
+}
+
+.StripeElement {
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgb(50 50 93 / 15%), 0 1px 0 rgb(0 0 0 / 2%);
 }
