@@ -137,6 +137,28 @@ a {
   height: 45px;
 }
 
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 3rem;
+}
+
+.page-navigation-before,
+.page-navigation-after {
+  background-color: #02b2bc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.page-navigation-now {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  align-self: center;
+}
+
 /* OFFER */
 
 .offer-body {

@@ -1,13 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Cookies from "js-cookie";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Publish from "./pages/Publish";
-import Cookies from "js-cookie";
+import Payment from "./pages/Payment";
 
 function App() {
   const [isConnected, setIsConnected] = useState(Cookies.get("token") || null);
@@ -30,6 +31,7 @@ function App() {
           path="/publish"
           element={<Publish isConnected={isConnected} />}
         />
+        <Route path="/payement" element={<Payment />} />
       </Routes>
     </Router>
   );

@@ -15,6 +15,8 @@ const Publish = ({ isConnected }) => {
   const [picture, setPicture] = useState();
 
   const [previewPicture, setPreviewPicture] = useState();
+
+  // TODO :
   const [errorMessage, setErrorMessage] = useState();
 
   const navigate = useNavigate();
