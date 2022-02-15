@@ -1,22 +1,16 @@
 import { loadStripe } from "@stripe/stripe-js";
-import {
-  Elements,
-  useStripe,
-  useElements,
-  CardElement,
-} from "@stripe/react-stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
 import { useState } from "react";
+import PaymentStripe from "../components/PaymentStripe";
 
 const Payment = () => {
-  const stripe = useStripe();
-  const elements = useElements();
   const stripePromise = loadStripe("pk_test_5z9rSB8XwuAOihoBixCMfL6X");
+
   const location = useLocation();
   const { title, price } = location.state;
 
-  const [paymentDone, serPaymentDone] = useState();
+  const [paymentDone, setPaymentDone] = useState();
 
   const protect = (price / 10).toFixed(2);
   const fraisPort = (price / 20).toFixed(2);
@@ -24,12 +18,6 @@ const Payment = () => {
     2
   );
 
-  const handlePayment = async (event) => {
-    event.preventDefault();
-
-    const cardElement = elements.getElements(CardElement);
-  };
-  // URL : https://lereacteur-vinted-api.herokuapp.com/payment
   return (
     <div className="payment-container">
       <div className="payment-card">
@@ -63,12 +51,11 @@ const Payment = () => {
           </p>
           <div className="divider"></div>
           <Elements stripe={stripePromise}>
-            <form onSubmit={handlePayment}>
-              <CardElement></CardElement>
-              <button className="payment-pay-button" type="submit">
-                Pay
-              </button>
-            </form>
+            <PaymentStripe
+              title={title}
+              price={price}
+              setPaymentDone={setPaymentDone}
+            />
           </Elements>
         </div>
       </div>
