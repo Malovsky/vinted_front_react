@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const OfferCard = ({ item }) => {
+const OfferCard = ({item}) => {
   return (
     <Link to={`/offer/${item._id}`}>
       <div className="card-item-container">
         <div className="header-card-item">
           <img
-            src={item.owner.account.avatar.secure_url}
+            src={item.owner.account.avatar?.secure_url}
             className="owner-avatar-item"
             alt={item.owner.account.username}
           />
@@ -14,7 +14,7 @@ const OfferCard = ({ item }) => {
         </div>
         <div className="card-item-image">
           <img
-            src={item.product_pictures[0].secure_url}
+            src={item.product_pictures[0]?.secure_url}
             alt={item.product_name}
           />
         </div>
@@ -23,8 +23,6 @@ const OfferCard = ({ item }) => {
           <p className="card-item-size">{item.product_details[1].TAILLE}</p>
           <p className="card-item-brand">{item.product_details[0].MARQUE}</p>
         </div>
-
-        {/* <p>{item.product_name}</p> */}
       </div>
     </Link>
   );

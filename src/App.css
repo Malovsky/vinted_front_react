@@ -1,308 +1,439 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: 400;
-    margin: 1rem 0;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 1rem 0;
 }
 
 /* To re-DO */
 link,
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 /* HEADER */
 
+.header {
+  background-color: white;
+}
+
 .navbar {
-    display: flex;
-    align-items: center;
-    margin: 1rem auto;
-    width: 96vw;
-    max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  width: 96vw;
+  max-width: 1200px;
 }
 
 .home-searchbar {
-    background-color: rgb(245, 245, 245);
-    padding-left: 1rem;
-    height: 2rem;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    margin-right: 3rem;
+  background-color: rgb(245, 245, 245);
+  padding-left: 1rem;
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 3rem;
 }
 
 .logo-vinted {
-    height: 50px;
-    width: auto;
-    margin: 0.5rem 6rem 0.5rem 0;
-    cursor: pointer;
+  height: 50px;
+  width: auto;
+  margin: 0.5rem 6rem 0.5rem 0;
+  cursor: pointer;
 }
 
 .home-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .homepage-button {
-    min-width: 9rem;
-    border-radius: 5px;
-    max-height: 2rem;
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+  min-width: 9rem;
+  border-radius: 5px;
+  max-height: 2rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .log-button {
-    background-color: white;
-    color: #02b2bc;
-    margin-right: 1rem;
-    border: 1px solid #02b2bc;
+  background-color: white;
+  color: #02b2bc;
+  margin-right: 1rem;
+  border: 1px solid #02b2bc;
 }
 
 .sell-articles-button {
-    margin-left: 3rem;
-    color: white;
-    background-color: #02b2bc;
-    border: none;
+  margin-left: 3rem;
+  color: white;
+  background-color: #02b2bc;
+  border: none;
 }
 
 .logout-button {
-    border: none;
-    background-color: #c2185b;
-    color: white;
+  border: none;
+  background-color: #c2185b;
+  color: white;
 }
 
 /* OFFERS */
 
 .center {
-    display: flex;
-    align-items: center;
-    margin: 1rem auto;
-    width: 96vw;
-    max-width: 1200px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  width: 96vw;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
 .header-card-item {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .card-item-container {
-    width: 235px;
-    padding: 0 6px 20px 6px;
+  width: 235px;
+  padding: 0 6px 20px 6px;
 }
 
 .owner-avatar-item {
-    margin: 0.5rem;
-    height: 25px;
-    width: 25px;
-    border-radius: 40px;
+  margin: 0.5rem;
+  height: 25px;
+  width: 25px;
+  border-radius: 40px;
 }
 
 .card-item-image img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
 }
 
 .card-item-price {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: black;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: black;
 }
 
 .card-item-size,
 .card-item-brand,
 .owner-name-item {
-    color: gray;
-    font-size: 0.9rem;
-    font-weight: 300;
+  color: gray;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .footer-card-item {
-    height: 45px;
+  height: 45px;
 }
 
 /* OFFER */
 
 .offer-body {
-    height: calc(100vh - 60px);
-    background-color: #ebedee;
+  height: calc(100vh - 60px);
+  background-color: #ebedee;
 }
 
 .offer-details {
-    margin: 1rem auto;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 96vw;
-    max-width: 1200px;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 96vw;
+  max-width: 1200px;
 }
 
 .offer-details > img {
-    width: 450px;
-    height: auto;
+  width: 450px;
+  height: auto;
 }
 
 .offer-details-texts {
-    width: 450px;
-    padding: 2rem;
-    background-color: white;
+  width: 450px;
+  padding: 2rem;
+  background-color: white;
 }
 
 .offer-details-price {
-    font-size: 24px;
-    line-height: 32px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .offer-details-brand-and-co {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem 1rem 0;
 }
 
 .offer-details-brand-and-co span:nth-child(odd) {
-    color: #999;
+  color: #999;
 }
 
 .offer-details-brand-and-co li {
-    display: flex;
-    padding: 2px 0;
+  display: flex;
+  padding: 2px 0;
 }
 
 .offer-details-brand-and-co span {
-    flex: 1;
-    font-size: 12px;
-    text-transform: uppercase;
+  flex: 1;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .offer-details-description {
-    color: #666;
-    margin: 1rem auto;
+  color: #666;
+  margin: 1rem auto;
 }
 
 .offer-details-texts .divider {
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: rgba(17, 17, 17, 0.1);
-    margin: 3rem auto;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+  margin: 3rem auto;
 }
 
 .offer-details-name {
-    font-weight: bold;
-    margin: 1rem auto;
+  font-weight: bold;
+  margin: 1rem auto;
 }
 
 .offer-details-owner-avatar {
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    margin-right: 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 1rem;
 }
 
 .offer-details-owner {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .offer-details-owner-name {
-    font-size: 20px;
-    font-weight: 300;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .offer-details-buy-button {
-    background-color: #02b2bc;
-    color: white;
-    width: 100%;
-    margin: 3rem auto 0 auto;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #02b2bc;
+  color: white;
+  width: 100%;
+  margin: 3rem auto 0 auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* 'SIGNUP' AND 'LOGIN' BECAUSE THEY SHARE SOME CLASSES */
 
 .signup-container,
 .login-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 #signup-form,
 #login-form {
-    display: flex;
-    flex-direction: column;
-    width: 275px;
-    margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  margin: 1rem auto;
 }
 
 .signup-form input[type="checkbox"] {
-    transform: scale(2);
-    margin-right: 20px;
-    margin-left: 0px;
+  transform: scale(2);
+  margin-right: 20px;
+  margin-left: 0px;
 }
 
 .signup-form-input,
 .login-form-input {
-    border: none;
-    border-bottom: 1px solid #fcced3;
-    height: 35px;
-    margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #fcced3;
+  height: 35px;
+  margin-bottom: 20px;
 }
 
 .signup-form-input::placeholder,
 .login-form-input::placeholder {
-    font-size: 1rem;
-    color: #d6d6d6;
+  font-size: 1rem;
+  color: #d6d6d6;
 }
 
 .signup-checkbox-container {
-    padding: 10px;
-    margin: 1rem 0;
+  padding: 10px;
+  margin: 1rem 0;
 }
 
 .signup-checkbox > span {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .signup-checkbox-container > p {
-    text-align: left;
-    color: #999;
-    font-size: 12px;
-    margin-top: 1rem;
-    font-size: small;
-    font-weight: 300;
+  text-align: left;
+  color: #999;
+  font-size: 12px;
+  margin-top: 1rem;
+  font-size: small;
+  font-weight: 300;
 }
 
 .submit-signup-button,
 .submit-login-button {
-    background-color: #02b2bc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-top: 20px;
-    cursor: pointer;
+  background-color: #02b2bc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .login-signup-link {
-    color: #02b2bc;
-    font-size: 0.8rem;
-    cursor: pointer;
-    font-weight: 300;
+  color: #02b2bc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+/* Publish */
+
+.publish-main {
+  background-color: #ebedee;
+}
+
+.publish-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-zone {
+  display: flex;
+  border-bottom: 1px solid #ebedee;
+  padding: 1.5rem;
+}
+
+.flex-zone > h4,
+.flex-zone > input {
+  flex: 1;
+}
+
+.publish-container > #publish-title {
+  margin-top: 2rem;
+  padding-top: 3rem;
+}
+
+.publish-picture-style-container {
+  border: #02b2bc solid 1px;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #02b2bc;
+  cursor: pointer;
+}
+
+.publish-plus-symbol {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #02b2bc;
+}
+
+.publish-picture-text {
+  color: #02b2bc;
+  cursor: pointer;
+}
+
+.publish-picture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 0 2px grey;
+  height: 10rem;
+}
+
+#publish-file {
+  display: none;
+}
+
+#publish-file {
+  height: 200px;
+}
+
+.publish-preview-picture {
+  height: 100%;
+  width: auto;
+}
+.publish-delete-preview-picture {
+  color: rgb(207, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgb(207, 0, 0);
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.publish-title-container,
+.publish-details-container,
+.publish-price-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.flex-zone > input::placeholder {
+  color: #c9ccce;
+}
+
+.flex-zone input {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #ebedee;
+  max-height: 2rem;
+  padding: 1px 2px;
+  width: 50%;
+  font-size: 1rem;
+}
+
+.flex-zone input:focus {
+  outline: none;
+  border-bottom: 1px solid #02b2bc;
+}
+
+.flex-zone h4 {
+  /* padding: 24px; */
+}
+
+.publish-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.publish-button {
+  background-color: #02b2bc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 2rem 0 5rem;
+  cursor: pointer;
 }

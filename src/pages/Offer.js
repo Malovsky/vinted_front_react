@@ -27,7 +27,7 @@ const Offer = () => {
   ) : (
     <div className="offer-body">
       <div className="offer-details">
-        <img src={item.product_pictures[0].secure_url} alt="" />
+        <img src={item.product_pictures[0]?.secure_url} alt="" />
         <div className="offer-details-texts">
           <p className="offer-details-price">{item.product_price} €</p>
           <ul className="offer-details-brand-and-co">
@@ -47,7 +47,7 @@ const Offer = () => {
           </p>
           <div className="offer-details-owner">
             <img
-              src={item.owner.account.avatar.secure_url}
+              src={item.owner.account.avatar?.secure_url}
               className="offer-details-owner-avatar"
               alt={item.owner.account.username}
             />{" "}

@@ -1,13 +1,13 @@
 import logoVinted from "../assets/Vinted-logo.png";
 import Cookies from "js-cookie";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({isConnected, setIsConnected}) => {
+const Header = ({ isConnected, setIsConnected }) => {
   const navigate = useNavigate();
 
   const logout = () => {
-    setIsConnected(false);
     Cookies.remove("token");
+    setIsConnected(false);
     navigate("/");
   };
 
@@ -47,7 +47,12 @@ const Header = ({isConnected, setIsConnected}) => {
             </>
           )}
 
-          <button className="homepage-button sell-articles-button">
+          <button
+            className="homepage-button sell-articles-button"
+            onClick={() => {
+              navigate("/publish");
+            }}
+          >
             Vends tes articles
           </button>
         </div>

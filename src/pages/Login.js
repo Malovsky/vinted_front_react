@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 
-const Login = ({ setIsConnected }) => {
+const Login = ({setIsConnected}) => {
   const navigate = useNavigate();
 
   const [email, valueOfEmail] = useState("");
@@ -12,7 +12,7 @@ const Login = ({ setIsConnected }) => {
   const handleSubmitSignUpForm = async (event) => {
     event.preventDefault();
 
-    const data = { email: email, password: password };
+    const data = {email: email, password: password};
 
     const response = await axios.post(
       "https://lereacteur-vinted-api.herokuapp.com/user/login",
@@ -21,10 +21,8 @@ const Login = ({ setIsConnected }) => {
 
     Cookies.set("token", response.data.token);
     setIsConnected(true);
-    navigate("/");
+    navigate("/publish");
   };
-
-  // URL to use : https://lereacteur-vinted-api.herokuapp.com/user/login
 
   return (
     <div className="login-container">

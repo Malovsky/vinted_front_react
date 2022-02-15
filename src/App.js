@@ -6,12 +6,11 @@ import Offer from "./pages/Offer";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Publish from "./pages/Publish";
 import Cookies from "js-cookie";
 
 function App() {
-  const [isConnected, setIsConnected] = useState(
-    Cookies.get("token") ? true : false
-  );
+  const [isConnected, setIsConnected] = useState(Cookies.get("token") || null);
 
   return (
     <Router>
@@ -27,6 +26,10 @@ function App() {
           element={<Signup setIsConnected={setIsConnected} />}
         />
         <Route path="/offer/:id" element={<Offer />} />
+        <Route
+          path="/publish"
+          element={<Publish isConnected={isConnected} />}
+        />
       </Routes>
     </Router>
   );
