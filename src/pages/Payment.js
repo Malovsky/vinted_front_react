@@ -50,13 +50,17 @@ const Payment = () => {
             <span className="bold">{price} €</span> (frais de port inclus).
           </p>
           <div className="divider"></div>
-          <Elements stripe={stripePromise}>
-            <PaymentStripe
-              title={title}
-              price={price}
-              setPaymentDone={setPaymentDone}
-            />
-          </Elements>
+          {paymentDone ? (
+            <p>Le payment a bien été effectué ! ✅</p>
+          ) : (
+            <Elements stripe={stripePromise}>
+              <PaymentStripe
+                title={title}
+                price={price}
+                setPaymentDone={setPaymentDone}
+              />
+            </Elements>
+          )}
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const Publish = ({ isConnected }) => {
   const [previewPicture, setPreviewPicture] = useState();
 
   // TODO :
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const navigate = useNavigate();
 
@@ -49,6 +49,8 @@ const Publish = ({ isConnected }) => {
           }
         );
         response.data && navigate(`/offer/${response.data._id}`);
+      } else {
+        setErrorMessage(true);
       }
     } catch (error) {
       console.log(error.message);
@@ -68,7 +70,7 @@ const Publish = ({ isConnected }) => {
               <>
                 <img
                   src={previewPicture}
-                  alt="Image que vous avez selectionné"
+                  alt={previewPicture}
                   className="publish-preview-picture"
                 />
                 <p
@@ -190,6 +192,11 @@ const Publish = ({ isConnected }) => {
             </div>
           </div>
           <div className="publish-button-container">
+            {errorMessage && (
+              <p>
+                Il nous faut un titre, un prix et une description AU MINIMUM
+              </p>
+            )}
             <input className="publish-button" type="submit" value="Ajouter" />
           </div>
         </form>

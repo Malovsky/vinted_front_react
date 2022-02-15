@@ -18,7 +18,7 @@ const Header = ({ isConnected, setIsConnected }) => {
           <img
             className="logo-vinted"
             src={logoVinted}
-            alt=""
+            alt="Logo de la marque Vinted"
             onClick={() => navigate("/")}
           />
           <input
